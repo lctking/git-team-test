@@ -6,8 +6,8 @@ public class User {
     private String username;
 
     public User(Long id, String username) {
-        if(id == null){
-            throw new NullPointerException("id cannot be null");
+        if(id == null || username == null || username.isEmpty()){
+            throw new NullPointerException("id and username cannot be null");
         }
         this.id = id;
         this.username = username;
